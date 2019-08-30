@@ -1,8 +1,5 @@
 import java.util.*;
 class Book{
-  //public static final String ANSI_RESET = "\u001B[0m";
-  //public static final String ANSI_RED = "\u001B[31m";
-  //public static final String ANSI_PURPLE = "\u001B[35m";
   String name, auth;
   int price, num_pages;
   Scanner s = new Scanner(System.in);
@@ -30,8 +27,6 @@ class Book{
   }
   public String toString(){
     String s;
-    //s = ANSI_PURPLE + "The Name of the Book is - " + ANSI_RED + name + ANSI_PURPLE + " The Author of the Book is -";
-    //return s;
     s = ("The Name of the Book is - "+name+"\nThe Author of the Book is - "+auth+"\nThe Price of the Book is - "+price+"\nThe  number of pages in the book is - "+num_pages);
     return s;
   }
@@ -48,7 +43,6 @@ class bookDemo{
       b[i] = new Book();
       b[i].get();
     }
-    System.out.println("------------------------------------------------");
     for(i = 0; i < n ; i++){
       System.out.println("Printing the Details of the Book "+(i+1));
       System.out.println(b[i]);

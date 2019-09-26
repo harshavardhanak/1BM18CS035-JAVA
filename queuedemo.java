@@ -11,9 +11,9 @@ class queue
         rear=-1;
         a=new int[n];
      }
-   void insertion(queue ob)
+   void insertion()
     { 
-      if(ob.rear==ob.n-1)
+      if(rear==n-1)
       {
         System.out.println("Queue is full");
       }
@@ -21,25 +21,25 @@ class queue
       {
         System.out.println("Enter the element");
         int ele=sc.nextInt();
-        ob.rear=ob.rear+1;
-        ob.a[rear]=ele;
+        rear=rear+1;
+        a[rear]=ele;
       }
     }
-    void deletion(queue ob)
+    void deletion()
     {
-      if(ob.front>ob.rear)
+      if(front>rear)
        {
          System.out.println("Queue is empty");
        }
       else
        {
-         System.out.println("Deleted element is "+ob.a[front]);
-         ob.front=ob.front+1;
+         System.out.println("Deleted element is "+a[front]);
+         front=front+1;
        }
     }
-    void display(queue ob)
+    void display()
     {
-      if(ob.front>ob.rear)
+      if(front>rear)
        {
          System.out.println("Queue is empty");
        }
@@ -47,7 +47,7 @@ class queue
        {
          System.out.println("Elements of queue ");
          for(int i=0;i<5;i++)
-         System.out.println(ob.a[i]);
+         System.out.println(a[i]);
        }
     }
 }
@@ -65,11 +65,11 @@ class queue
          int c=sc.nextInt();
          switch(c)
            { 
-              case 1: ob1.insertion(ob1);
+              case 1: ob1.insertion();
                       break;
-              case 2: ob1.deletion(ob1);
+              case 2: ob1.deletion();
                       break;
-              case 3: ob1.display(ob1);
+              case 3: ob1.display();
                       break;
               case 4: i++;
            }

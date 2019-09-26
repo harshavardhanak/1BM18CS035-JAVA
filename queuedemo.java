@@ -2,13 +2,14 @@ import java.util.*;
 class queue
  {
    Scanner sc=new Scanner(System.in);
-   int front,rear;
-   final int n=5;
+   int front,rear,n;
    int[] a;
-   queue()
+   void initialize()
      {  
         front=0;
         rear=-1;
+        System.out.println("Enter the size");
+        n=sc.nextInt();
         a=new int[n];
      }
    void insertion()
@@ -46,7 +47,7 @@ class queue
       else
        {
          System.out.println("Elements of queue ");
-         for(int i=0;i<5;i++)
+         for(int i=front;i<=rear;i++)
          System.out.println(a[i]);
        }
     }
@@ -58,6 +59,7 @@ class queue
        Scanner sc=new Scanner(System.in);
        queue ob1=new queue();
        int i=1;
+       ob1.initialize();
        while(i==1)
        {
          System.out.print("1.Insertion,2.Deletion,3.Display,4.Exit\n");
@@ -75,8 +77,7 @@ class queue
            }
        }
     }
-  }               
-           
+  }    
      
    
       
